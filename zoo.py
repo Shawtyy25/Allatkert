@@ -27,6 +27,16 @@ while select != '0':
         if select == '1':
             name = input('Az állat neve: ')
             addAnimal(name)
-                   
+        
+        elif select == '2':
+            remove = input('Eltávolítandó állat neve: ')
+            
+            for i in zoo:
+                if name in i.keys():
+                    if i[name] > 0:
+                        i[name] -= 1
+                    
+                    else:
+                        del i[name]
                 
 print(zoo)
